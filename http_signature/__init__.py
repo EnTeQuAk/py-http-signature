@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from .sign import Signer, HeaderSigner
 
 from ._version import get_versions

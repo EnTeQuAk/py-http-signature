@@ -1,5 +1,7 @@
+from __future__ import unicode_literals
 from setuptools import setup, find_packages
 import versioneer
+versioneer.VCS = 'git'
 versioneer.versionfile_source = 'http_signature/_version.py'
 versioneer.versionfile_build = 'http_signature/_version.py'
 versioneer.tag_prefix = 'v' # tags are like 1.2.0
