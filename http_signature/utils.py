@@ -21,7 +21,7 @@ class CaseInsensitiveDict(dict):
     def __init__(self, d=None, **kwargs):
         super(CaseInsensitiveDict, self).__init__(**kwargs)
         if d:
-            self.update((k.lower(), v) for k, v in d.iteritems())
+            self.update((k.lower(), v) for k, v in d.items())
 
     def __setitem__(self, key, value):
         super(CaseInsensitiveDict, self).__setitem__(key.lower(), value)
