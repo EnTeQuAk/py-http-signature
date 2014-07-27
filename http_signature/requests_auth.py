@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from requests.auth import AuthBase
-from urlparse import urlparse
+from six.moves.urllib_parse import urlparse
 
 from .sign import HeaderSigner
 
@@ -9,7 +9,7 @@ class HTTPSignatureAuth(AuthBase):
     '''
     Sign a request using the http-signature scheme.
     https://github.com/joyent/node-http-signature/blob/master/http_signing.md
-    
+
     key_id is the mandatory label indicating to the server which secret to use
     secret is the filename of a pem file in the case of rsa, a password string in the case of an hmac algorithm
     algorithm is one of the six specified algorithms
