@@ -4,6 +4,7 @@ Changes
 0.2.0 ()
 ~~~~~~~~
 
+* Remove versioneer, good old versioning.
 * Update to newer spec (incompatible with prior version).
 * Handle `request-line` meta-header.
 * Allow secret to be a PEM encoded string.

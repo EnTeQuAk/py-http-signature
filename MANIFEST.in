@@ -1,4 +1,2 @@
 include README.rst
 include CHANGES.rst
-include versioneer.py
-include http_signature/_version.py
