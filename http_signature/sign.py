@@ -1,4 +1,3 @@
-from __future__ import unicode_literals
 from datetime import datetime
 from getpass import getpass
 from os.path import expanduser

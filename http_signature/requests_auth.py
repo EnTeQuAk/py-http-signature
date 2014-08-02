@@ -1,4 +1,3 @@
-from __future__ import unicode_literals
 from requests.auth import AuthBase
 from six.moves.urllib_parse import urlparse
 
