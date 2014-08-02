@@ -55,7 +55,9 @@ class Signer(object):
             self._rsa = PKCS1_v1_5.new(rsa_key)
             self._hash = HASHES[self.hash_algorithm]
         elif self.sign_algorithm == 'hmac':
-            self._hash = HMAC.new(bytes(secret, 'utf-8'), digestmod=HASHES[self.hash_algorithm])
+            if isinstance(secret, str):
+                secret = secret.encode('utf-8')
+            self._hash = HMAC.new(secret, digestmod=HASHES[self.hash_algorithm])
 
     @property
     def algorithm(self):
